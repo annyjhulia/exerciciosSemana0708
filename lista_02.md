@@ -353,8 +353,7 @@ Função MultiplicarMatrizesInvestimento(matrizA, matrizB):
 
         Retornar matrizResultado  
 
-    Para i de 0 até linhasResultado - 1 faça:
-        Para j de 0 até colunasResultado - 1 faça:
+    Para i de 0 até linhasResultado - 1 e j de 0 até colunasResultado - 1 faça:
             soma <- 0
             Para k de 0 até colunas(matrizA) - 1 faça:
                 soma <- soma + matrizA[i][k] * matrizB[k][j]
