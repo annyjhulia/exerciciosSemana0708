@@ -43,13 +43,6 @@ Qual das seguintes alternativas melhor descreve o que o código faz?
 
 A) O código avalia a expressão booleana, imprime `true`, calcula o produto dos números na lista e imprime o resultado no console.
 
-B) O código avalia a expressão booleana, imprime `false`, calcula o produto dos números na lista e imprime o resultado no console.
-
-C) O código avalia a expressão booleana, imprime `true` e, em seguida, verifica se o número 6 está na lista.
-
-D) O código avalia a expressão booleana, imprime `false` e ordena os valores em ordem crescente.
-
-
 ______
 
 **2)** O código a seguir contém duas funções que calculam o limite de crédito de um cliente com base nos seus gastos e na renda mensal.
@@ -103,13 +96,7 @@ function analisarCredito2() {
 ```
 Se ambas as funções forem executadas com os valores fornecidos, qual será a saída exibida no console?
 
-A) Ambas as funções exibirão: 'Seu crédito foi aprovado. Saldo disponível: 400.'
-
 B) analisarCredito1() exibirá: 'Seu crédito foi negado. Saldo disponível: -600.', enquanto analisarCredito2() exibirá: 'Seu crédito foi negado. Saldo disponível: -200.'
-
-C) analisarCredito1() exibirá: 'Seu crédito foi negado. Saldo disponível: -200.', enquanto analisarCredito2() exibirá: 'Seu crédito foi aprovado. Saldo disponível: 100.'
-
-D) Ambas as funções exibirão: 'Seu crédito foi aprovado Saldo disponível: 500.'
 ______
 
 **3)** Considere o seguinte trecho de código em JavaScript:
@@ -127,13 +114,7 @@ if (idade >= 18 && idade < 60) {
 ```
 Qual das seguintes alternativas melhor descreve o comportamento do código?
 
-A) O código verifica se a idade indica um adulto ou um idoso e exibe a mensagem correspondente.
-
 B) O código verifica se a idade pertence à faixa adulta. Se for, exibe "Você é um adulto!". Caso contrário, verifica se é menor de idade e exibe "Você é menor de idade!". Se nenhuma das condições anteriores for verdadeira, exibe "Você está na melhor idade!".
-
-C) O código verifica se a idade está entre 18 e 60 anos e, se for, imprime "Você é um adulto!". Se não estiver nesse intervalo, imprime "Você está na melhor idade!".
-
-D) O código verifica se a idade é menor de 18, entre 18 e 60 ou acima de 60, imprimindo uma mensagem específica para cada caso.
 ______
 
 **4)** Qual será o resultado impresso no console após a execução do seguinte código?
@@ -161,37 +142,6 @@ for (var i = 0; i < consumoDispositivos.length; i++) {
 
 Escolha a opção que responde corretamente:
 
-A)
-Dispositivo 1 ligado. Energia restante: 900
-
-Dispositivo 2 ligado com bateria extra. Energia restante: 700
-
-Dispositivo 3 ligado. Energia restante: 200
-
-Dispositivo 4 ligado com bateria extra. Energia restante: 0
-
-Dispositivo 5 ligado. Energia restante: -200
-
-B)
-Dispositivo 1 ligado. Energia restante: 900
-
-Dispositivo 2 ligado com bateria extra. Energia restante: 700
-
-Dispositivo 3 ligado. Energia restante: 200
-
-Dispositivo 4 não pode ser ligado. Energia insuficiente.
-
-Dispositivo 5 não pode ser ligado. Energia insuficiente.
-
-C)
-Dispositivo 1 ligado. Energia restante: 900
-
-Dispositivo 2 ligado com bateria extra. Energia restante: 700
-
-Dispositivo 3 ligado. Energia restante: 400
-
-Dispositivo 4 não pode ser ligado. Energia insuficiente.
-
 D)
 Dispositivo 1 ligado. Energia restante: 900
 
@@ -209,13 +159,8 @@ ______
 
 Escolha a opção que melhor descreve seu propósito:
 
-A) O método update() é responsável por carregar os assets do jogo antes da cena ser exibida.
-
 B) O método update() é chamado continuamente a cada quadro (frame) do jogo, sendo usado para atualizar a lógica, movimentação e interações dos objetos na cena.
 
-C) O método update() renderiza todos os sprites na tela e garante que a física do jogo seja processada corretamente.
-
-D) O método update() é chamado apenas uma vez após a criação da cena, sendo utilizado para configurar variáveis iniciais do jogo.
 ______
 
 **6)** Qual é o principal objetivo do módulo Matter.js Physics em Phaser.js?
@@ -224,44 +169,139 @@ Escolha a opção que responde corretamente:
 
 A) Simular física avançada, incluindo corpos rígidos, colisões complexas e interação entre objetos com gravidade e forças.
 
-B) Gerenciar eventos de entrada do usuário, como cliques e toques na tela, permitindo movimentação de personagens.
-
-C) Renderizar gráficos otimizados para jogos 2D e garantir uma taxa de quadros estável.
-
-D) Criar animações automáticas para sprites e objetos interativos sem necessidade de programação de movimentação.
-
 ______
 
 # Questões dissertativas
 
-**7)** Uma loja online deseja implementar um sistema de classificação de pedidos com base no valor total da compra. O sistema deve determinar a categoria de um pedido com as seguintes regras:
+**7)** Uma loja online deseja implementar um sistema de classificação de pedidos com base no valor total da compra. 
 
+
+```INICIO
+    SE valor < 50 ENTAO
+        ESCREVA "Frete não disponível!"
+
+    SENAO, SE valor >= 50 E valor <= 199.99 ENTAO
+        ESCREVA "Frete com custo adicional!"
+
+    SENAO, SE valor >= 200 ENTAO
+        ESCREVA "Frete grátis!"
+FIM
 ```
 
-Pedidos abaixo de R$50,00 → "Frete não disponível!"
+Exemplo do código em javascript:
+```javascript
+const valor = 75;
 
-Pedidos entre R$50,00 e R$199,99 (inclusive) → "Frete com custo adicional!"
-
-Pedidos de R$200,00 ou mais → "Frete grátis!"
+if (valor < 50) {
+  console.log(`Frete não disponível!`);
+}
+else if (valor >= 50 && valor <= 199.99) {
+    console.log(`Frete com custo adicional!`);
+}
+else if (valor >= 200) {
+    console.log(`Frete grátis!`);
+}
 ```
-Implemente um pseudocódigo que receba o valor total da compra e exiba a classificação correta do frete para o cliente.
 ______
 
 **8)** Considere a implementação da classe base Veiculo em um sistema de modelagem de veículos. Sua tarefa é implementar, utilizando pseudocódigo, as classes derivadas Carro e Moto, que herdam da classe Veiculo, adicionando atributos específicos e métodos para calcular o consumo de combustível de um carro e de uma moto, respectivamente.
 
-```
-Classe Veiculo:
-Atributos:
-
-modelo
-ano
-Método Construtor(modelo, ano):
-
-Define os valores dos atributos modelo e ano com os valores passados como parâmetro.
-Método CalcularConsumo():
-```
 Implementação genérica para cálculo de consumo, a ser sobrescrita pelas subclasses.
 Agora, implemente as classes Carro e Moto, garantindo que ambas herdem de Veiculo e possuam métodos específicos para calcular o consumo de combustível com base na quilometragem e eficiência do veículo.
+
+```
+INICIO
+CLASSE Veiculo
+    ATRIBUTOS:
+        modelo
+        ano
+        quilometragem
+        eficiencia
+
+    MÉTODO Construtor(modelo, ano, quilometragem, eficiencia)
+        ESTE.modelo ← modelo
+        ESTE.ano ← ano
+        ESTE.quilometragem ← quilometragem
+        ESTE.eficiencia ← eficiencia
+
+    MÉTODO CalcularConsumo()
+        ESCREVA "Implementação genérica"
+FIM CLASSE
+
+CLASSE Carro HERDA Veiculo
+    ATRIBUTOS:
+        cor
+
+    MÉTODO Construtor(modelo, ano, quilometragem, eficiencia, cor)
+        CHAMAR SUPER(modelo, ano, quilometragem, eficiencia)
+        ESTE.cor ← cor
+
+    MÉTODO CalcularConsumo()
+        ESCREVA "O carro ", ESTE.modelo, ", do ano de ", ESTE.ano, " e cor ", ESTE.cor, 
+        " gasta ", (ESTE.quilometragem / ESTE.eficiencia), 
+        " litros ao rodar ", ESTE.quilometragem, "km."
+FIM CLASSE
+
+CLASSE Moto HERDA Veiculo
+    ATRIBUTOS:
+        marca
+
+    MÉTODO Construtor(modelo, ano, quilometragem, eficiencia, marca)
+        CHAMAR SUPER(modelo, ano, quilometragem, eficiencia)
+        ESTE.marca ← marca
+
+    MÉTODO CalcularConsumo()
+        ESCREVA "A moto ", ESTE.modelo, ", da marca ", ESTE.marca, " e ano ", ESTE.ano, 
+        " gasta ", (ESTE.quilometragem / ESTE.eficiencia), 
+        " litros ao rodar ", ESTE.quilometragem, "km."
+FIM CLASSE
+FIM
+```
+
+Exemplo do código em javascript:
+```javascript
+class Veiculo {
+  constructor(modelo, ano, quilometragem, eficiencia) {
+    this.modelo = modelo;
+    this.ano = ano;
+    this.quilometragem = quilometragem;
+    this.eficiencia = eficiencia;
+  }
+
+  CalcularConsumo() {
+    console.log("Implementação genérica");
+  }
+  
+}
+
+class Carro extends Veiculo {
+  constructor(modelo, ano, quilometragem, eficiencia, cor) {
+    super(modelo, ano, quilometragem, eficiencia);
+    this.cor = cor;
+  }
+
+  CalcularConsumo() {
+    console.log(`O carro ${this.modelo}, do ano de ${this.ano} e cor ${this.cor}, gasta ${this.quilometragem/this.eficiencia} litros ao rodar ${this.quilometragem}km.`);
+  }
+}
+
+class Moto extends Veiculo {
+  constructor(modelo, ano, quilometragem, eficiencia, marca) {
+    super(modelo, ano, quilometragem, eficiencia);
+    this.marca = marca;
+  }
+
+  CalcularConsumo() {
+    console.log(`A moto ${this.modelo}, da marca ${this.marca} e ano ${this.ano}, gasta ${this.quilometragem/this.eficiencia} litros ao rodar ${this.quilometragem}km.`);
+  }
+}
+
+const carro1 = new Carro ("SUV", 2025, 2789, 12, "cinza");
+const moto1 = new Moto ("PCX", 2025, 563892, 45, "Honda");
+
+carro1.CalcularConsumo();
+moto1.CalcularConsumo();
+```
 ______
 
 **9)** Você é um cientista da NASA e está ajudando no desenvolvimento de um sistema de pouso para sondas espaciais em Marte. Seu objetivo é calcular o tempo necessário para que a sonda reduza sua velocidade até um nível seguro para pouso, considerando uma velocidade inicial de entrada na atmosfera marciana e uma taxa de desaceleração constante causada pelo atrito atmosférico e retrofoguetes.
@@ -275,35 +315,56 @@ Considere a fórumla de atualização velocidade:
     velocidade = velocidadeInicial - desaceleracao * tempo
 ```
 Seu programa deve determinar quanto tempo será necessário para que a sonda atinja uma velocidade segura de pouso, sem ultrapassar os limites estabelecidos.
+
+```
+INICIO
+
+FUNÇÃO calcularTempoPouso (velocidadeInicial, desaceleracao, tempoMaximo, velocidadeSegura):
+    tempo <- 0
+    velocidade <- velocidadeInicial
+    
+    ENQUANTO velocidade > velocidadeSegura e tempo < tempoMaximo FAÇA:
+        velocidade = velocidade - (desaceleracao * tempo)
+        tempo = tempo + 1
+    
+    SE velocidade <= velocidadeSegura ENTÃO
+        ESCREVA "Pouso seguro em ", tempo, " segundos."
+
+    SENAO
+        ESCREVA "Cuidado! Pouso inseguro devido a tempo máximo excedido."
+FIM
+```
 ______
 
 **10)** Em um sistema de análise financeira, as operações de investimento de uma empresa podem ser representadas por matrizes, onde cada linha representa um tipo de investimento e cada coluna representa um período de tempo.
 
 A seguir, é fornecida a implementação da função SomarMatrizesInvestimento(matrizA, matrizB), que soma os valores de duas matrizes de investimento. Sua tarefa é implementar uma função semelhante, porém que realize a multiplicação das matrizes de investimento, determinando como os investimentos afetam os resultados ao longo do tempo.
 
-```
-Função SomarMatrizesInvestimento(matrizA, matrizB):  
-    # Verifica se as matrizes têm o mesmo número de linhas e colunas  
-    Se tamanho(matrizA) ≠ tamanho(matrizB) então:  
-        Retornar "As matrizes não podem ser somadas. Elas têm dimensões diferentes."  
-    Senão:  
-        linhas <- tamanho(matrizA)  
-        colunas <- tamanho(matrizA[0])  
-        matrizResultado <- novaMatriz(linhas, colunas)  
+Agora, implemente a função MultiplicarMatrizesInvestimento(matrizA, matrizB), que multiplica as duas matrizes, simulando o efeito de diferentes fatores de crescimento e impacto financeiro nos investimentos ao longo do tempo.
 
-        # Loop para percorrer cada elemento das matrizes e calcular a soma  
-        Para i de 0 até linhas-1 faça:  
-            Para j de 0 até colunas-1 faça:  
-                matrizResultado[i][j] <- matrizA[i][j] + matrizB[i][j]  
+```
+Função MultiplicarMatrizesInvestimento(matrizA, matrizB):   
+    Se linhas(matrizA) ≠ colunas(matrizB) então:  
+        Retornar "As matrizes não podem ser mltiplicadas. Elas têm dimensões diferentes."  
+    Senão:  
+        linhasFinal <- linhas(matrizA)  
+        colunasFinal <- colunas(matrizB)  
+        matrizResultado <- novaMatriz(linhasFinal, colunasFinal)  
 
         Retornar matrizResultado  
 
-# Exemplo de uso da função  
-investimentosAno1 <- [[1000, 2000], [1500, 2500]]  
-investimentosAno2 <- [[1200, 1800], [1300, 2700]]  
+    Para i de 0 até linhasResultado - 1 faça:
+        Para j de 0 até colunasResultado - 1 faça:
+            soma <- 0
+            Para k de 0 até colunas(matrizA) - 1 faça:
+                soma <- soma + matrizA[i][k] * matrizB[k][j]
+            matrizResultado[i][j] <- soma
 
-totalInvestimentos <- SomarMatrizesInvestimento(investimentosAno1, investimentosAno2)  
-Escrever("Total de investimentos acumulados:")  
-ImprimirMatriz(totalInvestimentos)  
+# Exemplo 
+investimentosAno1 <- [[1000, 2000], [1500, 2500]]
+investimentosAno2 <- [[1.1, 1.2], [1.3, 1.1]]
+
+resultado <- MultiplicarMatrizesInvestimento(investimentosAno1, investimentosAno2)
+Escrever("Resultado dos investimentos:")
+ImprimirMatriz(resultado)
 ```
-Agora, implemente a função MultiplicarMatrizesInvestimento(matrizA, matrizB), que multiplica as duas matrizes, simulando o efeito de diferentes fatores de crescimento e impacto financeiro nos investimentos ao longo do tempo.
